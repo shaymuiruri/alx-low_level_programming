@@ -1,21 +1,29 @@
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
-
-int main() {
-    srand(time(0));
-    int n = rand() % 201 - 100;  // n will be assigned a random integer between -100 and 100
-    
-    std::cout << n << std::endl;
-    
-    if (n > 0) {
-        std::cout << "is positive" << std::endl;
-    } else if (n == 0) {
-        std::cout << "is zero" << std::endl;
-    } else {
-        std::cout << "is negative" << std::endl;
-    }
-    
-    return 0;
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+int n;
+srand(time(0));
+n = rand() - RAND_MAX / 2;
+/* your code goes there */
+if (n > 0)
+{
+printf("%d is positive\n", n);
+}
+if (n < 0)
+{
+printf("%d is negative\n", n);
+}
+if (n == 0)
+{
+printf("%d is zero\n", n);
+}
+return (0);
 }
 
